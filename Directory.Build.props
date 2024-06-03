@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project>
-  <PropertyGroup>
+  <PropertyGroup Label="General solution properties">
     <TargetFramework>net8.0</TargetFramework>
     <LangVersion>latest</LangVersion>
     <Nullable>enable</Nullable>
@@ -9,12 +9,15 @@
   </PropertyGroup>
 
   <!-- Warnings as errors -->
-  <PropertyGroup>
+  <PropertyGroup Label="General build properties">
     <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <!-- Only analyzer warnings are errors
+    <CodeAnalysisTreatWarningsAsErrors>true</CodeAnalysisTreatWarningsAsErrors>
+    -->
   </PropertyGroup>
 
   <!-- CVE detection-->
-  <PropertyGroup>
+  <PropertyGroup Label="NuGet settings">
     <NuGetAudit>true</NuGetAudit>
     <!-- Audit bot direct and transitive dependencies -->
     <NuGetAuditMode>all</NuGetAuditMode>
